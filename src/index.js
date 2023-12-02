@@ -2,6 +2,7 @@ import Notiflix from "notiflix";
 import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 import SlimSelect from "slim-select";
 export { selectors }
+import 'animate.css';
 
 
 
@@ -39,8 +40,8 @@ function onChange(e) {
         const temperament = cat[0].breeds[0].temperament;
 
         const catInfo = `
-        <img class="cat-image" src=${image} width="500">
-        <h1 align="center">${name}</h2>
+        <img class="cat-image animate__animated animate__jackInTheBox" src=${image} width="500">
+        <h1 align="center" class="">${name}</h2>
         <h2>Temperament:</h2><p>${temperament}</p>
         <h2>Description</h2><p>${description}</p>
         `
