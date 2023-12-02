@@ -13,7 +13,7 @@ const selectors = {
     info: document.querySelector('.cat-info')
 }
 
-
+selectors.loader.style.display = 'none';
 
 selectors.select.addEventListener('change', onChange)
 
@@ -40,9 +40,9 @@ function onChange(e) {
 
         const catInfo = `
         <img class="cat-image" src=${image} width="500">
-        <h2>${name}</h2>
+        <h1>${name}</h2>
         <h2>Temperament:</h2><p>${temperament}</p>
-        <p>${description}</p>
+        <h2>Description</h2><p>${description}</p>
         `
         selectors.info.innerHTML = catInfo
         selectors.info.style.display = 'block'
