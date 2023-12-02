@@ -9,24 +9,26 @@ import 'animate.css';
 const selectors = {
     select: document.querySelector('.breed-select'),
     body: document.querySelector('body'),
+    window: document.querySelector('window'),
     loader: document.querySelector('.loader'),
     error: document.querySelector('.error'),
     info: document.querySelector('.cat-info')
 }
-selectors.loader.style.display = 'none';
-
-
+selectors.loader.style.display = 'block';
+selectors.select.style.display = 'none';
 
 
 selectors.select.addEventListener('change', onChange)
 
 fetchBreeds()
     .then(breeds => {
-
+    
     const cats = breeds.map(({id, name}) => `
     <option value=${id}>${name}</option>
     `).join('');
     selectors.select.insertAdjacentHTML('beforeend', cats)
+    selectors.select.style.display = 'block';
+    selectors.loader.style.display = 'none';
 })
 
 
