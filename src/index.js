@@ -13,8 +13,10 @@ const selectors = {
     error: document.querySelector('.error'),
     info: document.querySelector('.cat-info')
 }
-
 selectors.loader.style.display = 'none';
+
+
+
 
 selectors.select.addEventListener('change', onChange)
 
@@ -51,6 +53,7 @@ function onChange(e) {
     })
     .catch(error => {
         Notiflix.Report.failure("Something went wrong", String(error), "OK")
+        selectors.loader.style.display = 'none';
     })
 }
 
