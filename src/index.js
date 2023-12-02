@@ -40,7 +40,7 @@ function onChange(e) {
 
         const catInfo = `
         <img class="cat-image" src=${image} width="500">
-        <h1>${name}</h2>
+        <h1 align="center">${name}</h2>
         <h2>Temperament:</h2><p>${temperament}</p>
         <h2>Description</h2><p>${description}</p>
         `
