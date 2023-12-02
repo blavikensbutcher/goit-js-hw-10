@@ -1,6 +1,8 @@
 import Notiflix from "notiflix";
 import { fetchBreeds, fetchCatByBreed } from "./cat-api";
+import SlimSelect from "slim-select";
 export { selectors }
+
 
 
 const selectors = {
@@ -11,7 +13,9 @@ const selectors = {
     info: document.querySelector('.cat-info')
 }
 
-    selectors.select.addEventListener('change', onChange)
+
+
+selectors.select.addEventListener('change', onChange)
 
 fetchBreeds()
     .then(breeds => {
@@ -35,7 +39,7 @@ function onChange(e) {
         const temperament = cat[0].breeds[0].temperament;
 
         const catInfo = `
-        <img src=${image} width="500">
+        <img class="cat-image" src=${image} width="500">
         <h2>${name}</h2>
         <h2>Temperament:</h2><p>${temperament}</p>
         <p>${description}</p>
