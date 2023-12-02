@@ -90,8 +90,6 @@ function onChange(e) {
 
 
 
-
-
 /**
   |============================
   | that was fetch
